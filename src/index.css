@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+:root {
+  /* =========================
+     BRAND COLORS - CRAVINGS
+     ========================= */
+  --color-primary: #FF5A1F;      /* Main CTA - Order Now */
+  --color-primary-hover: #dd3f0f;
+
+  --color-secondary: #FFC107;    /* Highlights, Offers */
+  --color-accent: #FF8A00;       /* Special badges */
+
+  /* =========================
+     STATUS COLORS
+     ========================= */
+  --color-success: #22C55E;      /* Available, Added to Cart */
+  --color-error: #DC2626;        /* Error, Remove */
+  --color-warning: #F59E0B;      /* Warning messages */
+
+  /* =========================
+     BACKGROUNDS
+     ========================= */
+  --color-background: #FFF7ED;   /* Main page background */
+  --color-surface: #FFFFFF;      /* Cards, Navbar, Sections */
+  --color-surface-alt: #FEF3C7;  /* Alternate sections */
+
+  /* =========================
+     TEXT COLORS
+     ========================= */
+  --color-text: #1F2937;         /* Primary text */
+  --color-text-muted: #6B7280;   /* Secondary text */
+  --color-text-light: #FFFFFF;   /* Text on dark buttons */
+
+  /* =========================
+     BORDERS
+     ========================= */
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+
+  /* =========================
+     SHADOWS
+     ========================= */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  /* =========================
+     BORDER RADIUS
+     ========================= */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+
+  /* =========================
+     TRANSITIONS
+     ========================= */
+  --transition: all 0.3s ease;
+}
