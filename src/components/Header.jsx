@@ -6,7 +6,7 @@ function Header()
         <> 
         <div className="bg-(--color-primary-hover) p-2 h-15">
             <div className="flex justify-between h-full items-center">
-                <div className="w-20 ms-5">
+                <div className="w-20 ms-6">
                     <img src={cravingsLogo} alt=""className="w-full" />
                 </div>
                 <div className="flex gap-2">
