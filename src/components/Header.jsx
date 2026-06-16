@@ -10,7 +10,7 @@ function Header()
                     <img src={cravingsLogo} alt=""className="w-full" />
                 </div>
                 <div className="flex gap-2">
-                    <Link to="/home" className="text-(--color-text-light) text-lg border border-transparent hover:border hover:underline">Home</Link>
+                    <Link to="/home" className="text-(--color-text-light) text-lg border border-transparent hover:underline">Home</Link>
                     <Link to="/login"className="text-(--color-text-light) text-lg border border-transparent hover:border hover:underline">Login</Link>
                     <Link to="/register"className="text-(--color-text-light) text-lg border border-transparent hover:border hover:underline">Register</Link>
                     <Link to="/contactUs"className="text-(--color-text-light) text-lg border border-transparent hover:border hover:underline">ContactUS</Link>
