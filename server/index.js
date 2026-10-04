@@ -3,29 +3,39 @@ dotenv.config();
 
 import express from "express";
 import connectDB from "./src/config/dbConnection.config.js";
+import AuthRouter from "./src/router/auth.route.js";
+import PublicRouter from "./src/router/public.ro  ute.js";
+import morgan from "morgan";
+import cors from "cors";
 
 const app = express();
 
+app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
+app.use(morgan("dev"));
 
-// Default API
+app.use("/auth", AuthRouter);
+app.use("/public", PublicRouter);
+
+//Default API
 app.get("/", (req, res) => {
   console.log("Default Get API Hit");
-  res.json({ message: "Welcome to my cravings backend Project" });
+  res.json({ message: "Welcome to my Cravings Project" });
 });
 
-// Default error handler
-app.use((err,req,res,next)=>{
-  const ErrMessage = err.message || "Internal Sever Error"
-  const ErrStatusCode = err.statusCode || 500;
+//Default Error Handler
 
-  res.status(ErrStatusCode).json({message:ErrMessage})
+app.use((err, req, res, next) => {
+  const ErrMessage = err.message || "Internal Server Error";
+  const ErrStausCode = err.statusCode || 500;
 
-})
+  res.status(ErrStausCode).json({ message: ErrMessage });
+});
 
 const port = process.env.PORT || 5000;
+
 app.listen(port, () => {
-  console.log("Server Started on PORT", port);
+  console.log("Server Started on port:", port);
   connectDB();
 });
